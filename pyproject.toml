@@ -1,0 +1,26 @@
+[project]
+name = "fjrb"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "fjrivera07",email = "fjriverabravo@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "fjrb", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=24.0,<25.0)",
+    "isort (>=5.0,<6.0)",
+    "ruff (>=0.4,<0.5)",
+    "pre-commit (>=3.0,<4.0)"
+]
