@@ -1,18 +1,17 @@
 [project]
-name = "fjrb"
+name = "laboratorio6-1"
 version = "0.1.0"
 description = ""
 authors = [
     {name = "fjrivera07",email = "fjriverabravo@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12,<3.14"
+requires-python = ">=3.12"
 dependencies = [
-    "pydantic (>=2.13.4,<3.0.0)"
 ]
 
 [tool.poetry]
-packages = [{include = "fjrb", from = "src"}]
+packages = [{include = "laboratorio6_1", from = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -20,8 +19,10 @@ build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
-    "black (>=24.0,<25.0)",
-    "isort (>=5.0,<6.0)",
-    "ruff (>=0.4,<0.5)",
-    "pre-commit (>=3.0,<4.0)"
+    "mypy (>=2.1.0,<3.0.0)",
+    "black (>=26.3.1,<27.0.0)",
+    "isort (>=8.0.1,<9.0.0)",
+    "ruff (>=0.15.13,<0.16.0)",
+    "pre-commit (>=4.6.0,<5.0.0)",
+    "pytest (>=9.0.3,<10.0.0)"
 ]
