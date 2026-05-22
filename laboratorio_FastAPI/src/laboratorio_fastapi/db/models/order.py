@@ -20,3 +20,11 @@ class Order(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
 
     user: Mapped["User"] = relationship(back_populates="orders")
+
+    quantity: Mapped[int] = mapped_column(Integer)
+
+    price: Mapped[int] = mapped_column(Integer)
+
+    @property
+    def total(self) -> int:
+        return self.quantity * self.price

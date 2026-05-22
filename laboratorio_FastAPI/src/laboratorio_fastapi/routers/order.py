@@ -11,7 +11,9 @@ router = APIRouter(prefix="/orders", tags=["Orders"])
 @router.post("/", response_model=OrderResponse)
 def create_order(order_data: OrderCreate, db: Session = Depends(get_db)):
 
-    order = Order(user_id=order_data.user_id)
+    order = Order(
+        user_id=order_data.user_id, quantity=order_data.quantity, price=order_data.price
+    )
 
     db.add(order)
     db.commit()
