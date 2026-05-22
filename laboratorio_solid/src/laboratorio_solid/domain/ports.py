@@ -1,0 +1,9 @@
+from laboratorio_solid.domain.entities import Order
+
+
+class OrderRepository:
+    def save(self, order: Order) -> None: ...
+
+    def get_by_id(self, order_id: int) -> Order | None: ...
+
+    def list_all(self) -> list[Order]: ...
