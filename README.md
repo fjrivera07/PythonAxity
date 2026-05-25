@@ -29,3 +29,8 @@
     En la capa de Domain se define la entidad de negocio y los contratos (puertos o interfaces) que representan las dependencias que el dominio necesita, como el repositorio.
     En la capa de Application se implementan los casos de uso o servicios de aplicación, que orquestan la lógica del negocio y reciben por inyección de dependencias esos contratos definidos en el dominio.
     Finalmente, en la capa de Infrastructure se crean las implementaciones concretas de esos contratos, encargándose de la comunicación con tecnologías externas como bases de datos, APIs o sistemas de mensajería.
+
+    laboratorio_datascience
+        poetry add pandas polars numpy scikit-learn joblib
+        poetry add --group dev pytest jupyter notebook
+        
